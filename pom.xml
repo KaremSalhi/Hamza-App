@@ -5,8 +5,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>tom</groupId>
-  <artifactId>Oper-Cal</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <artifactId>nexus-proxy-hi</artifactId>
+  <version>11.0</version>
 
   <name>Oper-Cal</name>
   <!-- FIXME change it to the project's website -->
@@ -27,6 +27,18 @@
     </dependency>
   </dependencies>
 
+  <distributionManagement>
+<repository>
+<id>nexus</id>
+<name>maven-releases</name>
+<url>http://localhost:8081/repository/maven-releases/</url>
+</repository>
+<snapshotRepository>
+<id>nexus</id>
+<name>maven-snapshots</name>
+<url>http://localhost:8081/repository/maven-snapshots/</url>
+</snapshotRepository>
+</distributionManagement>
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
@@ -72,4 +84,5 @@
       </plugins>
     </pluginManagement>
   </build>
+ 
 </project>
